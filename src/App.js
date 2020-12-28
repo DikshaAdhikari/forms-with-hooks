@@ -12,35 +12,10 @@ const App = () => {
   const inputEvent = (event) => {
     const { value, name } = event.target;
     setFullName((prevValue) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prevValue.lName,
-          email: prevValue.email,
-          phone: prevValue.phone
-        };
-      } else if (name === "lName") {
-        return {
-          fName: prevValue.fName,
-          lName: value,
-          email: prevValue.email,
-          phone: prevValue.phone
-        };
-      } else if (name === "email") {
-        return {
-          fName: prevValue.fName,
-          lName: prevValue.lName,
-          email: value,
-          phone: prevValue.phone
-        };
-      } else if (name === "phone") {
-        return {
-          fName: prevValue.fName,
-          lName: prevValue.lName,
-          email: prevValue.email,
-          phone: value
-        };
-      }
+      return {
+        ...prevValue,
+        [name]: value
+      };
     });
   };
 

@@ -21,6 +21,10 @@ h1 {
   text-shadow: 0 2px 2px black;
 }
 
+p {
+  color: rgb(224, 202, 202);
+}
+
 input {
   width: 50%;
   padding: 10px 20px;
